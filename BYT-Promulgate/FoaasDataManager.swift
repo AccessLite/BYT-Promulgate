@@ -17,8 +17,8 @@ class FoaasDataManager {
     private static let defaults = UserDefaults.standard
     internal private(set) var operations: [FoaasOperation]?
     
-    func save(operations: [FoaasOperation]){
-        let data = operations.flatMap{ try? $0.toData() }
+    func save(operations: [FoaasOperation]) {
+        let data = operations.flatMap { try? $0.toData() }
         FoaasDataManager.defaults.set(data, forKey: FoaasDataManager.operationsKey)
         print("Defaults saved: \(FoaasDataManager.operationsKey)")
     }
