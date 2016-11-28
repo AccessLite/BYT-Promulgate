@@ -36,6 +36,15 @@ class FoaasOperationsTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - Navigation
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = (sender as? FoaasOperationTableViewCell).flatMap(tableView.indexPath) {
+            (segue.destination as! FoaasPreviewViewController).fThisOperation = operations[indexPath.row]
+        }
+    }
+    
     // MARK: - Actions
     // MARK: - Actions
     @IBAction func dismiss(_ sender: AnyObject) {

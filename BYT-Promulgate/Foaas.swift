@@ -15,7 +15,7 @@ class Foaas: JSONConvertible, CustomStringConvertible {
     internal let message: String
     internal let subtitle: String
     var description: String {
-        return "Message: \(message). Subtitle: \(subtitle)"
+        return "\(message) \n \(subtitle)"
     }
     
     init(message: String, subtitle: String) {

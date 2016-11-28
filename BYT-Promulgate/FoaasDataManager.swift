@@ -27,7 +27,6 @@ class FoaasDataManager {
         guard let validData = FoaasDataManager.defaults.value(forKey: FoaasDataManager.operationsKey) as? [Data] else { return false }
         let operations = validData.flatMap{ FoaasOperation(data: $0) }
         FoaasDataManager.shared.operations = operations
-        print("Defaults loaded: \(operations)")
         return true
     }
     
