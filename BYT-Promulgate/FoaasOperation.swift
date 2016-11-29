@@ -13,7 +13,7 @@ import Foundation
 class FoaasOperation: JSONConvertible, DataConvertible {
     
     internal let name: String
-    internal let url: String
+    internal var url: String
     internal let fields: [FoaasField]
 
     init(name: String, url: String, fields: [FoaasField]) {
